@@ -9,8 +9,6 @@
   ffmpeg,
   sqlite,
   openssl,
-  cargo,
-  rustc
 }:
 
 rustPlatform.buildRustPackage rec {
@@ -21,14 +19,14 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "nikolaizombie1";
     repo = pname;
-    rev = version;
+    rev = "cfedddbed9a957f5b1fe99af0e3bab0557ef1008";
     hash = "sha256-uigBtmFPVPoYXNQPwFOAxwOFUApk05+zIKH9szLCG74=";
   };
 
   
 
   nativeBuildInputs = [ pkg-config glib wrapGAppsHook4 sqlite ];
-  buildInputs = [ glib gtk4 ffmpeg sqlite openssl cargo rustc ];
+  buildInputs = [ glib gtk4 ffmpeg sqlite openssl ];
   env = {
     OPENSSL_NO_VENDOR = 1;
   };
