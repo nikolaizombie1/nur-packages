@@ -8,7 +8,9 @@
   wrapGAppsHook4,
   ffmpeg,
   sqlite,
-  openssl
+  openssl,
+  cargo,
+  rustc
 }:
 
 rustPlatform.buildRustPackage rec {
@@ -26,7 +28,7 @@ rustPlatform.buildRustPackage rec {
   
 
   nativeBuildInputs = [ pkg-config glib wrapGAppsHook4 sqlite ];
-  buildInputs = [ glib gtk4 ffmpeg sqlite openssl ];
+  buildInputs = [ glib gtk4 ffmpeg sqlite openssl cargo rustc ];
   env = {
     OPENSSL_NO_VENDOR = 1;
   };
