@@ -20,8 +20,8 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "nikolaizombie1";
     repo = pname;
-    rev = "0.5.5";
-    hash = "sha256-TOFOxJJRhzLIIymWcACQVngjxTsngbiJZPewziF0QW4=";
+    rev = "0.5.6";
+    hash = "sha256-XyRzr6m+jdGtw7Mu9FDwBt/VQvG7mzRGYPL9FxiwND0=";
   };  
 
   nativeBuildInputs = [ pkg-config glib wrapGAppsHook4 sqlite ];
